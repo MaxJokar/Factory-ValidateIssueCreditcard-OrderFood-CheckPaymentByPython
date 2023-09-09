@@ -1,7 +1,10 @@
 """Warm up classmethod  &  Staticmethod """
-# Python program to
+
+# A class method can access or modify the class state while 
+# a static method can’t access or modify it.
 # demonstrate static methods
   
+# Python program to demonstrate use of a static method 
 class Person: 
     def __init__(self, name, age): 
         self.name = name 
@@ -20,12 +23,9 @@ if __name__ == "__main__":
     res = Person.isAdult(22)
     print('\nIs person adult:', res)
 
-# A class method can access or modify the class state while 
-# a static method can’t access or modify it.
 
 
-# Python program to demonstrate
-# use of a class method and static method.
+# Python program to demonstrate use of a class method with static method 
 from datetime import date
  
 class Person:

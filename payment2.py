@@ -1,5 +1,8 @@
 """A simpler & straighforward way compared with payment1 """
 from enum import Enum
+
+# typing: attempts to provide a way of hinting types to help static 
+# type checkers and linters accurately predict errors.
 from typing import Protocol
 
 class PayementMethod(Enum):

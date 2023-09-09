@@ -7,7 +7,7 @@ class Payment:
         if payment_type == "paypal":
             return object.__new__(PaypalPayment)
         elif payment_type == "card":
-            return object.__new__(StripePayment)
+            return object.__new__(StripePayment) # create a new instance , go to StipePayment class
 
 
 class PaypalPayment(Payment):
