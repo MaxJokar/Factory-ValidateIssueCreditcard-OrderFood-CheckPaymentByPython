@@ -1,4 +1,4 @@
-# ValidateIssueCreditcard-OrderFood-CheckPaymentusingPython
+# Validate/Issue Creditcard types ,OrderFood by card/Paypal-CheckPayment using Python
 credit_cardNumb_gen.py
 Title: Simple Credit Card Number Generator
 Author: d3adc0de
