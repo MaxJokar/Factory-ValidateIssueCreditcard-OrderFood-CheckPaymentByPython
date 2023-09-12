@@ -28,14 +28,11 @@ class OrderPaymentHandler:
         
 
     @classmethod
-    def  order_food(cls, items: list[str] , PRICES) : 
-        
-        
+    def  order_food(cls, items: list[str] , PRICES) :           
             total = sum(PRICES[item] for item in items)
             print(f"\n\Classmethod: Your order for {items} is : {total/100:.2f}")
             # print(f"your order is : {total/100:.2f}")
-            # we dont have here @staticmethod or @classmethod 
-            
+            # we dont have here @staticmethod or @classmethod      
             print(" Thanks for shopping  \n")
             
     
