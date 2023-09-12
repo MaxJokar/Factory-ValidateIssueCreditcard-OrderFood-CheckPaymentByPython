@@ -30,7 +30,7 @@ class OrderPaymentHandler:
     @classmethod
     def  order_food(cls, items: list[str] , PRICES) :           
             total = sum(PRICES[item] for item in items)
-            print(f"\n\Classmethod: Your order for {items} is : {total/100:.2f}")
+            print(f"\nClassmethod: Your order for {items} is : {total/100:.2f}")
             # print(f"your order is : {total/100:.2f}")
             # we dont have here @staticmethod or @classmethod      
             print(" Thanks for shopping  \n")
@@ -41,7 +41,8 @@ def main():
     order1 = OrderPaymentHandler(["drink","sausage"],PRICES )
     # print("heeeeeeeelooooooooooo",order1.items)
     print("this is order1partOneTest")
-    order1.calculate(["drink","sausage"],PRICES )   
+    order1.calculate(["drink","sausage"],PRICES ) 
+    # using classmethod:  
     OrderPaymentHandler.order_food(["drink","salad"] ,OrderPaymentHandler.PRICES )
 
 if __name__ == "__main__":
@@ -49,6 +50,9 @@ if __name__ == "__main__":
 
 
 # Output:
-# your order for ['drink', 'salad'] is : 35.90
-# charging from Your card  :35.90
-# thanks for shopping
+# this is order1partOneTest
+# Your order for ['drink', 'sausage'] is : 89.93
+# BYE BYE
+
+# Classmethod: Your order for ['drink', 'salad'] is : 35.90
+#  Thanks for shopping
