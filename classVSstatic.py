@@ -6,7 +6,7 @@
   
 # Python program to demonstrate use of a static method 
 class Person: 
-    def __init__(self, name, age): 
+    def __init__(self, name: str, age: int): 
         self.name = name 
         self.age = age 
         
@@ -45,13 +45,20 @@ class Person:
     def isAdult(age):
         return age > 18
  
-person1 = Person('mayank', 21)
-person2 = Person.fromBirthYear('mayank', 1996)
+person1 = Person('Maximchik', 21)
+person2 = Person.fromBirthYear('john', 1996)
  
 print(person1.age)
 print(person2.age)
+print(person2.name)
  
 # print the result
 print(Person.isAdult(22))
 
 
+# Is person adult: False
+
+# Is person adult: True
+# 21
+# 27
+# True

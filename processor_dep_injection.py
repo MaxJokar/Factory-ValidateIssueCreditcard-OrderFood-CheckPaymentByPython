@@ -11,7 +11,9 @@ class StripPaymentHandler:
 PRICES ={
     'salad' : 20_52,
     'drink':15_38,
-    'fish':50_55  
+    'fish':50_55 ,
+    'burger':85_55 ,
+    'sausage':74_55 ,
 }
 
 
