@@ -19,7 +19,7 @@ class StripPaymentHandler:
         
 
     @classmethod
-    def  order_foot(cls, items: list[str] , PRICES) : 
+    def  order_food(cls, items: list[str] , PRICES) : 
         
         
             total = sum(PRICES[item] for item in items)
@@ -32,7 +32,7 @@ class StripPaymentHandler:
     
 
 def main():
-    StripPaymentHandler.order_foot(["drink","salad"] ,StripPaymentHandler.PRICES )
+    StripPaymentHandler.order_food(["drink","salad"] ,StripPaymentHandler.PRICES )
 
 if __name__ == "__main__":
     main()
