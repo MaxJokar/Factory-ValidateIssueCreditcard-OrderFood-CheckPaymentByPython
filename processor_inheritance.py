@@ -1,7 +1,12 @@
 """
 Classmethod to implement instead of  depenancy-injection 
+we can update/modify daily prices for our product provided in our Burgershop
+using a list of product propertionally with their price as a list 
 """
-class StripPaymentHandler:
+from processor_dep_injection import PRICES
+
+
+class OrderPaymentHandler:
 
     PRICES ={
         'salad' : 20_52,
@@ -11,11 +16,15 @@ class StripPaymentHandler:
         'sausage':74_55 ,
     }
     
-    def handle_payment(self, items: list[str] , PRICES):
+    def __init__ (self, items: list[str],PRICES ):
         self.items = items
         self.PRICE = PRICES
+        # print("this is init part test:",self.PRICES)
 
-       
+    def calculate(self, items , PRICES):
+            total = sum(PRICES[item] for item in items)
+            print(f"Your order for {items} is : {total/100:.2f}")    
+            print(f"BYE BYE ")
         
 
     @classmethod
@@ -23,16 +32,20 @@ class StripPaymentHandler:
         
         
             total = sum(PRICES[item] for item in items)
-            print(f"your order for {items} is : {total/100:.2f}")
+            print(f"\n\Classmethod: Your order for {items} is : {total/100:.2f}")
             # print(f"your order is : {total/100:.2f}")
             # we dont have here @staticmethod or @classmethod 
             
-            print("thanks for shopping  \n")
+            print(" Thanks for shopping  \n")
             
     
 
 def main():
-    StripPaymentHandler.order_food(["drink","salad"] ,StripPaymentHandler.PRICES )
+    order1 = OrderPaymentHandler(["drink","sausage"],PRICES )
+    # print("heeeeeeeelooooooooooo",order1.items)
+    print("this is order1partOneTest")
+    order1.calculate(["drink","sausage"],PRICES )   
+    OrderPaymentHandler.order_food(["drink","salad"] ,OrderPaymentHandler.PRICES )
 
 if __name__ == "__main__":
     main()
